@@ -1,5 +1,21 @@
 h1{
+    padding: 5%;
     color: blueviolet;
     font-weight: bold;
     text-align: center;
+}
+
+#countryDisplay{
+    margin: 8%;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:25px;
+}
+.country{
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
 }
