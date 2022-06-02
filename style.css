@@ -19,3 +19,11 @@ h1{
     text-align: center;
     width: 300px;
 }
+#countryDetail img{
+    width: 100px;
+}
+#countryDetail{
+    /* border-radius: 30px;
+    border: 2px dotted skyblue; */
+    text-align: center;
+}

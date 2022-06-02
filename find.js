@@ -10,7 +10,7 @@ const displayCountries = countries =>{
         countryDiv.className = 'country'
 
         const countryInfo = `
-            <h3>${country.name}</h3>
+            <h2 onclick="countryDetail('${country.name}')">${country.name}</h2>
             <p>${country.capital}</p>
         `
         countryDiv.innerHTML = countryInfo
@@ -47,4 +47,21 @@ const displayCountries = countries =>{
         // // ul.appendChild(li)
         // // // console.log(country.name)
     // }
+}
+
+const countryDetail = name =>{
+    const url = `https://restcountries.com/v2/name/${name}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => rendarCountryInfo(data[0]))
+}
+
+const rendarCountryInfo = country => {
+    const countryDiv = document.getElementById('countryDetail')
+    countryDiv.innerHTML = `
+        <h3>${country.name}</h3>
+        <p>Population : ${country.population}</p>
+        <p>Area : ${country.area}</p>
+        <img src="${country.flag}">
+    `
 }
